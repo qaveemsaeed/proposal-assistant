@@ -1,0 +1,5 @@
+
+{
+  "name": "Upwork Proposal Assistant",
+  "description": "Analyzes Upwork project descriptions to generate proposal outlines with pain points, solutions, and a recommended tech stack using Gemini."
+}

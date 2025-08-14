@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork Proposal Assistant</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Upwork Proposal Assistant</h1>
+            <p>Generate a winning proposal outline from a project description.</p>
+        </header>
+        <main>
+            <div class="input-section">
+                <label for="project-description">Project Description</label>
+                <textarea id="project-description" rows="12" placeholder="Paste the Upwork project description here..."></textarea>
+                <button id="generate-btn" aria-label="Generate proposal outline">Generate Outline</button>
+            </div>
+            <div id="loading-indicator" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing description and crafting your outline...</p>
+            </div>
+            <section id="results" aria-live="polite"></section>
+        </main>
+        <footer>
+            <p>Powered by Gemini</p>
+        </footer>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+        }
+      }
+    </script>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
